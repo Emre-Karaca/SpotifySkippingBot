@@ -20,8 +20,7 @@ def skip_song_until_input():
             current_playback = sp.current_playback()  # Get the current playback state
 
             if current_playback and current_playback['is_playing']:
-                if current_playback[
-                    'progress_ms'] >= 60000:  # Check if the song has been playing for at least 60 seconds
+                if current_playback['progress_ms'] >= 60000:  # Check if the song has been playing for at least 60 seconds
                     sp.next_track()  # Skip to the next track
                     print("Skipped to the next song.")
 
