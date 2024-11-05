@@ -25,7 +25,7 @@ def skip_song_until_input():
                     print("Skipped to the next song.")
             time.sleep(1)  # Wait for a short time
 
-            if input() == "":  # Check for user input to stop the bot
+            if input():  # Check for user input to stop the bot
                 print("Skipping bot stopped by user.")
                 break
     except KeyboardInterrupt:  # Handle Ctrl + C
