@@ -15,21 +15,20 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
 
 def skip_song_until_input():
     print("Skipping songs... Press Enter to stop.")
-    try:
-        while True:
+    while True:
+        try:
             current_playback = sp.current_playback()  # Get the current playback state
-
-            if current_playback and current_playback['is_playing']:
-                if current_playback['progress_ms'] >= 60000:  # Check if played for at least 60 seconds
+            if current_playback['is_playing']: # Checks if the song is playing
+                if current_playback['progress_ms'] >= 600000:  # Check if played for at least 60 seconds
                     sp.next_track()  # Skip
                     print("Skipped to the next song.")
-            time.sleep(1)  # Wait for a short time
-
-            if input():  # Check for user input to stop the bot
-                print("Skipping bot stopped by user.")
+            time.sleep(1)
+            if not current_playback['is_playing']: # Checks if the song is still playing
+                print("Skipping bot stopped by user.") # Stops the bot
                 break
-    except KeyboardInterrupt:  # Handle Ctrl + C
-        print("Skipping bot stopped by user.")
+        except KeyboardInterrupt:  # Checks for when the user presses Ctrl + C in the terminal
+            print("Skipping bot stopped by user.")
+            break
 
 if __name__ == "__main__":
     skip_song_until_input()
