@@ -3,7 +3,7 @@ A Python bot that automatically skips songs on Spotify after one minute of playb
 
 ## Features
 - Automatically skips songs after 1 minute of playtime.
-- Continuously skips songs until interrupted by user input.
+- Continuously skips songs until the song is paused. After the song is paused, the bot stops.
 - Built using Python and the Spotipy library for Spotify API integration.
 
 ## Prerequisites
