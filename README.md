@@ -15,6 +15,7 @@ Before you begin, ensure you have met the following requirements:
 
 ```bash
 pip install spotipy
+```
 
 - Open the `SkippingBot.py` file.
 - Locate the following lines and replace the placeholder text with your actual Spotify API credentials:
@@ -23,3 +24,4 @@ pip install spotipy
 CLIENT_ID = 'YOUR_CLIENT_ID'         # Your Spotify Client ID
 CLIENT_SECRET = 'YOUR_CLIENT_SECRET' # Your Spotify Client Secret
 REDIRECT_URI = 'http://localhost:8888/callback'  # Your Redirect URI
+```
