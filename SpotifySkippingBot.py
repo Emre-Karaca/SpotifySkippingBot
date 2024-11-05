@@ -14,7 +14,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                scope='user-modify-playback-state user-read-playback-state'))
 
 def skip_song_until_input():
-    print("Skipping songs... Press Enter to stop.")
+    print("Skipping songs...Pause the song to stop")
     while True:
         try:
             current_playback = sp.current_playback()  # Get the current playback state
