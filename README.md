@@ -25,3 +25,6 @@ CLIENT_ID = 'YOUR_CLIENT_ID'         # Your Spotify Client ID
 CLIENT_SECRET = 'YOUR_CLIENT_SECRET' # Your Spotify Client Secret
 REDIRECT_URI = 'http://localhost:8888/callback'  # Your Redirect URI
 ```
+
+## License
+This project is open-source and licensed under the [MIT License](LICENSE).
